@@ -7,17 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="centerContainer">
-        <h1>Prompt Generator</h1>
-        <div id="buttonContainer">
-            <button id="createBtn">New Prompts</button>
-            <button id="resetBtn">Reset</button>
-        </div>
-    </div>
-    <!-- Image Display Area -->
-    <div id="imageContainer"></div>
+    <!-- Menu Screen -->
+    <div id="menuScreen">
+    <h1>Choose Your Generator</h1>
+    <button id="landscapesBtn">Landscapes</button>
+    <button id="storiesBtn">4-Image Stories</button>
+</div>
 
+<div id="landscapesGenerator" class="hidden">
+    <h1>Landscapes</h1>
+    <button id="newLandscapeBtn">Show New Landscape</button>
+    <div id="landscapeImageContainer"></div>
+    <button id="backToMenu1">Back to Menu</button>
+</div>
+
+<div id="storiesGenerator" class="hidden">
+    <h1>4-Image Stories</h1>
+    <button id="createBtn">Create Prompt</button>
+    <button id="resetBtn">Reset</button>
+    <div id="imageContainer"></div>
+    <button id="backToMenu2">Back to Menu</button>
+</div>
     <script src="script.js"></script>
 </body>
-
 </html>
