@@ -1,3 +1,7 @@
 # PromptGenerator
 
-This code is simple, but will display a random series of images, in order, that can be used as creative writing prompts, or for small starters like inferring emotions or thoughts, or preditcting future events.
+This code has two options: Landscapes, 4-Image Stories. 
+Landscapes will show one large landscape image, there are currently 8 that are selected randomly. You will not get the same image twice in a row.
+4-Image stories shows 4 images in chronological order, there are currently 6 sets of images. You will not get the same set twice in a row.
+
+The idea is to use this to prompt students to: infer characters thoughts and feelings, predict what happens next, or as a basis for a short story of their own.
