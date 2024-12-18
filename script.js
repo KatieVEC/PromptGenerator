@@ -13,6 +13,10 @@ const landscapes = [
     'images/landscape2.png',
     'images/landscape3.png',
     'images/landscape4.png'
+    'images/landscape5.png'
+    'images/landscape6.png'
+    'images/landscape7.png'
+    'images/landscape8.png'
 ];
 
 // Menu and sections
