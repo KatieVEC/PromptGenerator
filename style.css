@@ -1,105 +1,164 @@
-// Image sets
-const imageSets = [
-    ['images/destruction1.png', 'images/destruction2.png', 'images/destruction3.png', 'images/destruction4.png'], // Stories
-    ['images/nature1.png', 'images/nature2.png', 'images/nature3.png', 'images/nature4.png'],
-    ['images/space1.png', 'images/space2.png', 'images/space3.png', 'images/space4.png'],
-    ['images/shipwreck1.png', 'images/shipwreck2.png', 'images/shipwreck3.png', 'images/shipwreck4.png'],
-    ['images/bookstore1.png', 'images/bookstore2.png', 'images/bookstore3.png', 'images/bookstore4.png'],
-    ['images/leftbehind1.png', 'images/leftbehind2.png', 'images/leftbehind3.png', 'images/leftbehind4.png']
-];
+.hidden {
+    display: none !important; /* Force the hidden class to take effect */
+}
 
-const landscapes = [
-    'images/landscape1.png',
-    'images/landscape2.png',
-    'images/landscape3.png',
-    'images/landscape4.png'
-];
 
-// Menu and sections
-const menuScreen = document.getElementById('menuScreen');
-const landscapesGenerator = document.getElementById('landscapesGenerator');
-const storiesGenerator = document.getElementById('storiesGenerator');
+#menuScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-// Landscape generator elements
-const newLandscapeBtn = document.getElementById('newLandscapeBtn');
-const landscapeImageContainer = document.getElementById('landscapeImageContainer');
+#menuScreen button {
+    margin: 10px;
+    padding: 15px 30px; /* Increased padding for larger buttons */
+    font-size: 18px; /* Slightly larger font size */
+    width: 200px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-// Back to Menu buttons
-const backToMenu1 = document.getElementById('backToMenu1');
-const backToMenu2 = document.getElementById('backToMenu2');
+#menuScreen button:hover {
+    background-color: #2980b9;
+}
 
-// Stories generator buttons
-const createBtn = document.getElementById('createBtn');
-const resetBtn = document.getElementById('resetBtn');
-const imageContainer = document.getElementById('imageContainer');
+/* Landscape Image Container */
+#landscapeImageContainer img {
+    width: 500px;
+    height: auto;
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+/* General button styling */
+button {
+    display: flex; /* Enables flexbox on the button */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    text-align: center; /* Ensures multi-line text is centered */
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+}
 
-// Last shown index to prevent repeats
-let lastIndex = -1;
+/* Hover effect for all buttons */
+button:hover {
+    background-color: #2980b9;
+}
 
-// Menu Button Listeners
-document.getElementById('landscapesBtn').addEventListener('click', () => {
-    menuScreen.classList.add('hidden'); // Hide the menu screen
-    landscapesGenerator.classList.remove('hidden'); // Show the Landscapes generator
-});
+/* Reset button specific styling (red color) */
+#resetBtn {
+    background-color: #e74c3c; /* Red background */
+    color: white;
+}
 
-document.getElementById('storiesBtn').addEventListener('click', () => {
-    menuScreen.classList.add('hidden'); // Hide the menu screen
-    storiesGenerator.classList.remove('hidden'); // Show the 4-Image Stories generator
-});
+#resetBtn:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
 
-// Back to Menu Buttons
-backToMenu1.addEventListener('click', () => {
-    landscapesGenerator.classList.add('hidden'); // Hide Landscapes generator
-    menuScreen.classList.remove('hidden'); // Show the menu screen
-});
 
-backToMenu2.addEventListener('click', () => {
-    storiesGenerator.classList.add('hidden'); // Hide 4-Image Stories generator
-    menuScreen.classList.remove('hidden'); // Show the menu screen
-});
+/* General reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+}
 
-// Landscape Generator
-newLandscapeBtn.addEventListener('click', () => {
-    let randomIndex;
+/* Center container for title and buttons */
+#centerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
-    // Avoid showing the same image twice in a row
-    do {
-        randomIndex = Math.floor(Math.random() * landscapes.length);
-    } while (randomIndex === lastIndex);
+/* Button container for spacing */
+#buttonContainer button {
+    margin: 10px; /* Add spacing between buttons */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-    lastIndex = randomIndex;
+/* Style for Reset button */
+#resetBtn {
+    background-color: #e74c3c; /* Red background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-    // Show the new landscape
-    landscapeImageContainer.innerHTML = ''; // Clear the container
-    const img = document.createElement('img');
-    img.src = landscapes[randomIndex];
-    img.alt = 'Landscape Image';
-    landscapeImageContainer.appendChild(img);
-});
+#resetBtn:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
 
-// Stories Generator
-createBtn.addEventListener('click', () => {
-    imageContainer.innerHTML = ''; // Clear existing images
+/* Style for New button */
+#createBtn {
+    background-color: #3498db; /* Blue background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-    let randomIndex;
+#createBtn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
 
-    // Avoid showing the same set twice in a row
-    do {
-        randomIndex = Math.floor(Math.random() * imageSets.length);
-    } while (randomIndex === lastIndex);
+/* Image display area */
+#imageContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between images */
+    margin-top: 20px;
+}
+#imageContainer img {
+    margin: 10px;
+    width: 400px; /* Set width */
+    height: 300px; /* Force a consistent height */
+    object-fit: cover; /* Crop the image to fit while maintaining aspect ratio */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+#landscapeImageContainer img {
+    height: 600px; /* Set the fixed height */
+    width: auto; /* Automatically adjust the width to maintain the aspect ratio */
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+#storiesGenerator, #landscapesGenerator {
+    display: flex; /* Use flexbox to align content */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Ensures multi-line text is centered */
+    width: 100%; /* Ensures the container spans full width */
+    height: 100vh; /* Optional: Makes it take full viewport height */
+}
 
-    lastIndex = randomIndex;
-    const selectedSet = imageSets[randomIndex];
-
-    // Display images in the container
-    selectedSet.forEach(imagePath => {
-        const img = document.createElement('img');
-        img.src = imagePath;
-        img.alt = 'Prompt Image';
-        imageContainer.appendChild(img);
-    });
-});
-
-resetBtn.addEventListener('click', () => {
-    imageContainer.innerHTML = ''; // Clear images
-});
