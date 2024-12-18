@@ -1,32 +1,95 @@
-// Array of image sets (replace these with your themes)
+// Image sets
 const imageSets = [
-    ['images/destruction1.png', 'images/destruction2.png', 'images/destruction3.png', 'images/destruction4.png'],
+    ['images/destruction1.png', 'images/destruction2.png', 'images/destruction3.png', 'images/destruction4.png'], // Stories
     ['images/nature1.png', 'images/nature2.png', 'images/nature3.png', 'images/nature4.png'],
     ['images/space1.png', 'images/space2.png', 'images/space3.png', 'images/space4.png'],
     ['images/shipwreck1.png', 'images/shipwreck2.png', 'images/shipwreck3.png', 'images/shipwreck4.png'],
     ['images/bookstore1.png', 'images/bookstore2.png', 'images/bookstore3.png', 'images/bookstore4.png'],
-    ['images/leftbehind1.png', 'images/leftbehind2.png', 'images/leftbehind3.png', 'images/leftbehind4.png'],
+    ['images/leftbehind1.png', 'images/leftbehind2.png', 'images/leftbehind3.png', 'images/leftbehind4.png']
 ];
 
+const landscapes = [
+    'images/landscape1.png',
+    'images/landscape2.png',
+    'images/landscape3.png',
+    'images/landscape4.png'
+];
+
+// Menu and sections
+const menuScreen = document.getElementById('menuScreen');
+const landscapesGenerator = document.getElementById('landscapesGenerator');
+const storiesGenerator = document.getElementById('storiesGenerator');
+
+// Landscape generator elements
+const newLandscapeBtn = document.getElementById('newLandscapeBtn');
+const landscapeImageContainer = document.getElementById('landscapeImageContainer');
+
+// Back to Menu buttons
+const backToMenu1 = document.getElementById('backToMenu1');
+const backToMenu2 = document.getElementById('backToMenu2');
+
+// Stories generator buttons
 const createBtn = document.getElementById('createBtn');
 const resetBtn = document.getElementById('resetBtn');
 const imageContainer = document.getElementById('imageContainer');
 
-let lastIndex = -1; // Store the last index to avoid repetition
+// Last shown index to prevent repeats
+let lastIndex = -1;
 
-// Function to create a prompt (display 4 images)
-function createPrompt() {
+// Menu Button Listeners
+document.getElementById('landscapesBtn').addEventListener('click', () => {
+    menuScreen.classList.add('hidden'); // Hide the menu screen
+    landscapesGenerator.classList.remove('hidden'); // Show the Landscapes generator
+});
+
+document.getElementById('storiesBtn').addEventListener('click', () => {
+    menuScreen.classList.add('hidden'); // Hide the menu screen
+    storiesGenerator.classList.remove('hidden'); // Show the 4-Image Stories generator
+});
+
+// Back to Menu Buttons
+backToMenu1.addEventListener('click', () => {
+    landscapesGenerator.classList.add('hidden'); // Hide Landscapes generator
+    menuScreen.classList.remove('hidden'); // Show the menu screen
+});
+
+backToMenu2.addEventListener('click', () => {
+    storiesGenerator.classList.add('hidden'); // Hide 4-Image Stories generator
+    menuScreen.classList.remove('hidden'); // Show the menu screen
+});
+
+// Landscape Generator
+newLandscapeBtn.addEventListener('click', () => {
+    let randomIndex;
+
+    // Avoid showing the same image twice in a row
+    do {
+        randomIndex = Math.floor(Math.random() * landscapes.length);
+    } while (randomIndex === lastIndex);
+
+    lastIndex = randomIndex;
+
+    // Show the new landscape
+    landscapeImageContainer.innerHTML = ''; // Clear the container
+    const img = document.createElement('img');
+    img.src = landscapes[randomIndex];
+    img.alt = 'Landscape Image';
+    landscapeImageContainer.appendChild(img);
+});
+
+// Stories Generator
+createBtn.addEventListener('click', () => {
     imageContainer.innerHTML = ''; // Clear existing images
 
     let randomIndex;
 
-    // Keep picking a random index until it’s different from the last one
+    // Avoid showing the same set twice in a row
     do {
         randomIndex = Math.floor(Math.random() * imageSets.length);
     } while (randomIndex === lastIndex);
 
-    lastIndex = randomIndex; // Update the last shown index
-    const selectedSet = imageSets[randomIndex]; // Get the image set
+    lastIndex = randomIndex;
+    const selectedSet = imageSets[randomIndex];
 
     // Display images in the container
     selectedSet.forEach(imagePath => {
@@ -35,13 +98,8 @@ function createPrompt() {
         img.alt = 'Prompt Image';
         imageContainer.appendChild(img);
     });
-}
+});
 
-// Function to reset the display
-function resetPrompt() {
+resetBtn.addEventListener('click', () => {
     imageContainer.innerHTML = ''; // Clear images
-}
-
-// Event Listeners for buttons
-createBtn.addEventListener('click', createPrompt);
-resetBtn.addEventListener('click', resetPrompt);
+});
