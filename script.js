@@ -17,6 +17,14 @@ const landscapes = [
     'images/landscape6.png',
     'images/landscape7.png',
     'images/landscape8.png',
+    'images/landscape9.png',
+    'images/landscape10.png',
+    'images/landscape11.png',
+    'images/landscape12.png',
+    'images/landscape13.png',
+    'images/landscape14.png',
+    'images/landscape15.png',
+    'images/landscape16.png',
 ];
 
 // Menu and sections
