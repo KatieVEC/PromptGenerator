@@ -5,7 +5,8 @@ const imageSets = [
     ['images/space1.png', 'images/space2.png', 'images/space3.png', 'images/space4.png'],
     ['images/shipwreck1.png', 'images/shipwreck2.png', 'images/shipwreck3.png', 'images/shipwreck4.png'],
     ['images/bookstore1.png', 'images/bookstore2.png', 'images/bookstore3.png', 'images/bookstore4.png'],
-    ['images/leftbehind1.png', 'images/leftbehind2.png', 'images/leftbehind3.png', 'images/leftbehind4.png']
+    ['images/leftbehind1.png', 'images/leftbehind2.png', 'images/leftbehind3.png', 'images/leftbehind4.png'],
+    ['images/lamp1.png', 'images/lamp2.png', 'images/lamp3.png', 'images/lamp4.png']
 ];
 
 const landscapes = [
