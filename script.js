@@ -8,7 +8,8 @@ const imageSets = [
     ['images/leftbehind1.png', 'images/leftbehind2.png', 'images/leftbehind3.png', 'images/leftbehind4.png'],
     ['images/lamp1.png', 'images/lamp2.png', 'images/lamp3.png', 'images/lamp4.png'],
     ['images/indiana1.png', 'images/indiana2.png', 'images/indiana3.png', 'images/indiana4.png'],
-    ['images/doorway1.png', 'images/doorway2.png', 'images/doorway3.png', 'images/doorway4.png']
+    ['images/doorway1.png', 'images/doorway2.png', 'images/doorway3.png', 'images/doorway4.png'],
+    ['images/alice1.png', 'images/alice2.png', 'images/alice3.png', 'images/alice4.png']
 ];
 
 const landscapes = [
