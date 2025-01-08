@@ -39,6 +39,20 @@ const landscapes = [
     'images/landscape22.png',
     'images/landscape23.png',
     'images/landscape24.png',
+    'images/landscape25.png',
+    'images/landscape26.png',
+    'images/landscape27.png',
+    'images/landscape28.png',
+    'images/landscape29.png',
+    'images/landscape30.png',
+    'images/landscape31.png',
+    'images/landscape32.png',
+    'images/landscape33.png',
+    'images/landscape34.png',
+    'images/landscape35.png',
+    'images/landscape36.png',
+    'images/landscape37.png',
+    'images/landscape38.png',
 ];
 
 // Menu and sections
@@ -127,5 +141,13 @@ createBtn.addEventListener('click', () => {
 });
 
 resetBtn.addEventListener('click', () => {
-    imageContainer.innerHTML = ''; // Clear images
+    // Check which section is visible
+    if (!storiesGenerator.classList.contains('hidden')) {
+        console.log('Clearing story images...');
+        imageContainer.innerHTML = ''; // Clear images for the stories generator
+    } else if (!landscapesGenerator.classList.contains('hidden')) {
+        console.log('Clearing landscape images...');
+        landscapeImageContainer.innerHTML = ''; // Clear images for the landscapes generator
+    }
 });
+
