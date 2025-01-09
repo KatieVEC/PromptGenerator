@@ -39,36 +39,44 @@
 }
 /* General button styling */
 button {
-    display: flex; /* Enables flexbox on the button */
-    justify-content: center; /* Centers text horizontally */
-    align-items: center; /* Centers text vertically */
-    text-align: center; /* Ensures multi-line text is centered */
+    display: inline-flex; /* Use flexbox for the button itself */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
     margin: 10px;
-    padding: 15px 30px;
-    font-size: 18px;
-    width: 200px;
-    height: 50px;
+    padding: 10px 20px; /* Adjust padding for better alignment */
+    font-size: 18px; /* Keep font size consistent */
+    text-align: center; /* Ensures multi-line text is centered */
+    width: 200px; /* Fixed width */
+    height: 50px; /* Fixed height */
     cursor: pointer;
-    background-color: #3498db;
+    background-color: #3498db; /* Button background */
     color: white;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-}
+
 
 /* Hover effect for all buttons */
 button:hover {
     background-color: #2980b9;
 }
 
+/* Style the button container */
+.buttonContainer {
+    display: flex;           /* Align buttons horizontally */
+    gap: 10px;               /* Space between buttons */
+    justify-content: center; /* Center-align the buttons */
+    margin-bottom: 20px;     /* Space below the button container */
+}
+
 /* Reset button specific styling (red color) */
-#resetBtn {
+#resetStoriesBtn, #resetLandscapesBtn {
     background-color: #e74c3c; /* Red background */
     color: white;
 }
 
-#resetBtn:hover {
+#resetStoriesBtn:hover, #resetLandscapesBtn:hover {
     background-color: #c0392b; /* Darker red on hover */
 }
 
