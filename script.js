@@ -13,7 +13,9 @@ const imageSets = [
     ['images/jungle1.png', 'images/jungle2.png', 'images/jungle3.png', 'images/jungle4.png'],
     ['images/mermaid1.png', 'images/mermaid2.png', 'images/mermaid3.png', 'images/mermaid4.png'],
     ['images/littlered1.png', 'images/littlered2.png', 'images/littlered3.png', 'images/littlered4.png'],
-    ['images/goldilocks1.png', 'images/goldilocks2.png', 'images/goldilocks3.png', 'images/goldilocks4.png']
+    ['images/goldilocks1.png', 'images/goldilocks2.png', 'images/goldilocks3.png', 'images/goldilocks4.png'],
+    ['images/pyramid1.png', 'images/pyramid2.png', 'images/pyramid3.png', 'images/pyramid4.png'],
+    ['images/beanstalk1.png', 'images/beanstalk2.png', 'images/beanstalk3.png', 'images/beanstalk4.png']
 ];
 
 const landscapes = [
@@ -142,14 +144,18 @@ createBtn.addEventListener('click', () => {
     });
 });
 
-resetBtn.addEventListener('click', () => {
-    // Check which section is visible
-    if (!storiesGenerator.classList.contains('hidden')) {
-        console.log('Clearing story images...');
-        imageContainer.innerHTML = ''; // Clear images for the stories generator
-    } else if (!landscapesGenerator.classList.contains('hidden')) {
-        console.log('Clearing landscape images...');
-        landscapeImageContainer.innerHTML = ''; // Clear images for the landscapes generator
-    }
+const resetStoriesBtn = document.getElementById('resetStoriesBtn');
+const resetLandscapesBtn = document.getElementById('resetLandscapesBtn');
+
+// Reset Stories
+resetStoriesBtn.addEventListener('click', () => {
+    console.log('Resetting stories...');
+    imageContainer.innerHTML = ''; // Clear images for the stories generator
+});
+
+// Reset Landscapes
+resetLandscapesBtn.addEventListener('click', () => {
+    console.log('Resetting landscapes...');
+    landscapeImageContainer.innerHTML = ''; // Clear images for the landscapes generator
 });
 
