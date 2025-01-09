@@ -15,7 +15,8 @@ const imageSets = [
     ['images/littlered1.png', 'images/littlered2.png', 'images/littlered3.png', 'images/littlered4.png'],
     ['images/goldilocks1.png', 'images/goldilocks2.png', 'images/goldilocks3.png', 'images/goldilocks4.png'],
     ['images/pyramid1.png', 'images/pyramid2.png', 'images/pyramid3.png', 'images/pyramid4.png'],
-    ['images/beanstalk1.png', 'images/beanstalk2.png', 'images/beanstalk3.png', 'images/beanstalk4.png']
+    ['images/beanstalk1.png', 'images/beanstalk2.png', 'images/beanstalk3.png', 'images/beanstalk4.png'],
+    ['images/robot1.png', 'images/robot2.png', 'images/robot3.png', 'images/robot4.png']
 ];
 
 const landscapes = [
