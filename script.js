@@ -59,6 +59,23 @@ const landscapes = [
     'images/landscape36.png',
     'images/landscape37.png',
     'images/landscape38.png',
+    'images/landscape39.png',
+    'images/landscape40.png',
+    'images/landscape41.png',
+    'images/landscape42.png',
+    'images/landscape43.png',
+    'images/landscape44.png',
+    'images/landscape45.png',
+    'images/landscape46.png',
+    'images/landscape47.png',
+    'images/landscape48.png',
+    'images/landscape49.png',
+    'images/landscape50.png',
+    'images/landscape51.png',
+    'images/landscape52.png',
+    'images/landscape53.png',
+    'images/landscape54.png',
+    'images/landscape55.png',
 ];
 
 // Menu and sections
