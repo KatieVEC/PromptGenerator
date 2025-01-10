@@ -2,7 +2,6 @@
     display: none !important; /* Force the hidden class to take effect */
 }
 
-
 #menuScreen {
     display: flex;
     flex-direction: column;
@@ -31,12 +30,13 @@
 
 /* Landscape Image Container */
 #landscapeImageContainer img {
-    width: 500px;
-    height: auto;
+    height: 600px; /* Set the fixed height */
+    width: auto; /* Automatically adjust the width to maintain the aspect ratio */
     margin-top: 20px;
     border: 2px solid #ddd;
     border-radius: 8px;
 }
+
 /* General button styling */
 button {
     display: inline-flex; /* Use flexbox for the button itself */
@@ -56,7 +56,6 @@ button {
     transition: background-color 0.3s;
 }
 
-
 /* Hover effect for all buttons */
 button:hover {
     background-color: #2980b9;
@@ -64,10 +63,10 @@ button:hover {
 
 /* Style the button container */
 .buttonContainer {
-    display: flex;           /* Align buttons horizontally */
-    gap: 10px;               /* Space between buttons */
+    display: flex; /* Align buttons horizontally */
+    gap: 10px; /* Space between buttons */
     justify-content: center; /* Center-align the buttons */
-    margin-bottom: 20px;     /* Space below the button container */
+    margin-bottom: 20px; /* Space below the button container */
 }
 
 /* Reset button specific styling (red color) */
@@ -80,6 +79,14 @@ button:hover {
     background-color: #c0392b; /* Darker red on hover */
 }
 
+/* Specific square image styling */
+#imageContainer img.square-image {
+    width: 400px !important; /* Ensures square width */
+    height: 400px !important; /* Ensures square height */
+    object-fit: cover !important; /* Covers the square without distortion */
+    border: 1px solid #ddd; /* Optional: Add a border for clarity */
+    border-radius: 4px; /* Optional: Add rounded corners */
+}
 
 /* General reset */
 body {
@@ -145,21 +152,15 @@ body {
     gap: 15px; /* Space between images */
     margin-top: 20px;
 }
+
+/* General image styles in container */
 #imageContainer img {
     margin: 10px;
-    width: 400px; /* Set width */
-    height: 300px; /* Force a consistent height */
-    object-fit: cover; /* Crop the image to fit while maintaining aspect ratio */
     border: 2px solid #ddd;
     border-radius: 8px;
 }
-#landscapeImageContainer img {
-    height: 600px; /* Set the fixed height */
-    width: auto; /* Automatically adjust the width to maintain the aspect ratio */
-    margin-top: 20px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-}
+
+/* Stories Generator and Landscapes Generator */
 #storiesGenerator, #landscapesGenerator {
     display: flex; /* Use flexbox to align content */
     flex-direction: column; /* Stack items vertically */
@@ -169,4 +170,3 @@ body {
     width: 100%; /* Ensures the container spans full width */
     height: 100vh; /* Optional: Makes it take full viewport height */
 }
-
