@@ -160,6 +160,7 @@ createBtn.addEventListener('click', () => {
         const img = document.createElement('img');
         img.src = imagePath;
         img.alt = 'Prompt Image';
+        img.classList.add('square-image'); // Add the square-image class
         imageContainer.appendChild(img);
     });
 });
