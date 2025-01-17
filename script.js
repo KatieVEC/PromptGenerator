@@ -20,7 +20,8 @@ const imageSets = [
     ['images/ski1.png', 'images/ski2.png', 'images/ski3.png', 'images/ski4.png'],
     ['images/necklace1.png', 'images/necklace2.png', 'images/necklace3.png', 'images/necklace4.png'],
     ['images/pirate1.png', 'images/pirate2.png', 'images/pirate3.png', 'images/pirate4.png'],
-    ['images/naughty1.png', 'images/naughty2.png', 'images/naughty3.png', 'images/naughty4.png']
+    ['images/naughty1.png', 'images/naughty2.png', 'images/naughty3.png', 'images/naughty4.png'],
+    ['images/spy1.png', 'images/spy2.png', 'images/spy3.png', 'images/spy4.png']
 ];
 
 const landscapes = [
